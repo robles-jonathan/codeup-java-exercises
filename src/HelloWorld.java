@@ -111,10 +111,10 @@ public class HelloWorld {
 //        System.out.println(firstNumber / secondNumber);
 
         byte dayOfMonth = 28;
-        byte birtday = 7;
+        byte birthday = 7;
 
         //Implicit Casting - less specific data type, to a more specific data type.
-        int result = dayOfMonth + birtday;
+        int result = dayOfMonth + birthday;
 
         //Explicit Casting - more specific data type, to a less specific data type.
 
