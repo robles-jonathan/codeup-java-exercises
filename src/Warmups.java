@@ -6,7 +6,6 @@ public class Warmups {
         System.out.println("What did you eat for breakfast?");
         Scanner scanner = new Scanner(System.in);
         String userBreakfast = scanner.nextLine();
-        System.out.printf("OH Wow!!, you had %s for breakfast that's my favorite!",userBreakfast);
-
+        System.out.printf("OH Wow!!, you had %s for breakfast. My favorite breakfast is %s!", userBreakfast, userBreakfast);
     }
 }
