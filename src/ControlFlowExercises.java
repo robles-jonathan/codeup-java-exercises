@@ -3,24 +3,30 @@ import java.util.Scanner;
 public class ControlFlowExercises {
     private static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-
-        String response;
-        do{
-            System.out.println("What number would you like to go up to?");
-            Scanner input = new Scanner(System.in);
-            int num = input.nextInt();
-            System.out.println("Here is your table");
-            System.out.println("NUMBER | SQUARE | CUBED ");
-            System.out.println("-------|--------|-------");
-            for (int i = 1; i <= num; i++) {
-                int num1 = i;
-                int num2 = (int) Math.pow(i, 2);
-                int num3 = (int) Math.pow(i, 3);
-                System.out.printf("%-6d | %-6d | %-6d%n", num1, num2, num3);
+        //GRADING SYSTEM
+        Scanner scanner = new Scanner(System.in);
+        String input;
+        do {
+            System.out.println("Enter a grade number: ");
+            int grade = scanner.nextInt();
+            if (grade >= 88 && grade <= 100) {
+                System.out.println("You got an A");
+            } else if (grade >= 80 && grade < 88) {
+                System.out.println("You got a B");
+            } else if (grade >= 67 && grade < 80) {
+                System.out.println("You got a C");
+            } else if (grade >= 60 && grade < 67) {
+                System.out.println("You got a D");
+            } else if (grade >= 0 && grade < 60) {
+                System.out.println("You got an F");
+            } else {
+                System.out.println("You did not enter a grade value (0 - 100)");
             }
             System.out.println("Would you like to continue?");
-            response = sc.next();
-        } while(response.equalsIgnoreCase("yes"));
+            input = scanner.next();
+        } while (input.equalsIgnoreCase("yes"));
+        System.out.println("Have a nice day!");
+
     }
 
 }
