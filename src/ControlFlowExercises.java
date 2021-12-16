@@ -15,5 +15,11 @@ public class ControlFlowExercises {
             System.out.println(a);
             a -= 5;
         } while(a >= -10);
+        //Second Do While loop
+        long b = 2;
+        do{
+            System.out.println(b);
+            b *= b;
+        }while(b <= 1000000);
     }
 }
