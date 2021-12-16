@@ -4,13 +4,22 @@ import static java.lang.Integer.parseInt;
 
 public class ConsoleExercises {
     public static void main(String[] args){
+        /**Copy this code into your main method:
+         *      double pi = 3.14159;
+         *  Write some Java code that uses the variable pi to output the following:
+         *      The value of pi is approximately 3.14.
+         *  Don't change the value of the variable; instead, reference one of the links above and use System.out.format to accomplish this.
+         */
 //        double pi = 3.14159;
 //        System.out.format("The value of pi is approximately %.2f.%n", pi);
-//
+        /**
+         * Prompt a user to enter a integer and store that value in an int variable using the nextInt method.
+         *
+         * What happens if you input something that is not an integer?
+         * */
 //        System.out.println("What is your favorite number?");
 //        Scanner scanner = new Scanner(System.in);
 //        int userFavNum = scanner.nextInt();
-////        What happens if you input something that is not an integer? Input Mismatch Exception
 //        System.out.printf("Your favorite number is : %d.",userFavNum);
 
         /**
@@ -43,11 +52,13 @@ public class ConsoleExercises {
 
         /**Prompt the user to enter values of length and width of a classroom at Codeup (or your room if virtual).*/
         System.out.println("What is the length, width, and height of your room in feet?");
+
+
         Scanner scanner = new Scanner(System.in);
-//        scanner.useDelimiter("\n");
-        int length = scanner.nextInt();
-        int width = scanner.nextInt();
-        int height = scanner.nextInt();
+        scanner.useDelimiter("\n");
+        double length = scanner.nextInt();
+        double width = scanner.nextInt();
+        double height = scanner.nextInt();
 
 //        System.out.println("What is the width of your room in feet?");
         double area = length * width;
