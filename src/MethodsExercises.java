@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class MethodsExercises {
@@ -47,6 +48,30 @@ public class MethodsExercises {
         }
     }
 
+    public static void diceRoll(){
+        Boolean goOn = true;
+        Scanner scanner = new Scanner(System.in);
+        Random randomNum = new Random();
+
+
+        while(goOn){
+            System.out.print("\nEnter the number of dice: ");
+            int numberOfDice = scanner.nextInt();
+            System.out.println("Enter \"Roll\" to roll the dice.");
+            String response = scanner.next();
+            if (response.equalsIgnoreCase("Roll")) {
+                int randomNumber = 0;
+                for(var i = 0; i < numberOfDice; i++){
+                    randomNumber = randomNum.nextInt(6)+1;
+                    System.out.print(randomNumber + " ");
+                }
+                System.out.println("\nWanna play again? true/false");
+                goOn = scanner.nextBoolean();
+            }
+        }
+
+    }
+
     /*TODO: Bonus
      *Create your multiplication method without the * operator (Hint: a loop might be helpful).
      * https://medium.com/@ctrlalt_diljeet/multiply-without-using-in-javascript-890857bb003c
@@ -62,7 +87,9 @@ public class MethodsExercises {
 //        System.out.println(division(35, 5));
 //        System.out.println(remainder(388, 5));
 
-        System.out.println(getFactorial());
+//        System.out.println(getFactorial());
+
+        diceRoll();
 //Food for thought: What happens if we try to divide by zero? What should happen?
     }
 
