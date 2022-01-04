@@ -6,11 +6,33 @@ public class MethodsExercises {
         return num1 + num2;
     }
     public static int subtraction(int num1, int num2){
-        return num1 - num2;
+        if(num1 < num2){
+            return subtraction(num2, num1);
+        }else {
+            return num1 - num2;
+        }
     }
     public static int multiplication(int num1, int num2){
         return num1 * num2;
     }
+    //multiply without *
+    public static void noAsterick(int num1, int num2){
+        int result = 0;
+        for(int i = 1; i <= num1; i++){
+            result += num2;
+        }
+        System.out.println(result);
+    }
+
+    //multiplication using recursion
+    public static int multiplicationRecursion(int num1, int num2){
+        if(num2 ==0){
+            return 0;
+        }else {
+            return num1 + multiplicationRecursion(num1, num2 -1);
+        }
+    }
+
     public static int division(int num1, int num2){
         return num1 / num2;
     }
@@ -52,8 +74,6 @@ public class MethodsExercises {
         Boolean goOn = true;
         Scanner scanner = new Scanner(System.in);
         Random randomNum = new Random();
-
-
         while(goOn){
             System.out.print("\nEnter the number of dice: ");
             int numberOfDice = scanner.nextInt();
@@ -69,7 +89,6 @@ public class MethodsExercises {
                 goOn = scanner.nextBoolean();
             }
         }
-
     }
 
     /*TODO: Bonus
@@ -83,13 +102,15 @@ public class MethodsExercises {
 //        System.out.println(addition(4, 5));
 //        System.out.println(subtraction(3, 4));
 //        System.out.println(multiplication(3, 4));
+//        noAsterick(2,6);
+//        System.out.println(multiplicationRecursion(3, 8));
 //        System.out.println(division(40, 5));
 //        System.out.println(division(35, 5));
 //        System.out.println(remainder(388, 5));
 
 //        System.out.println(getFactorial());
 
-        diceRoll();
+//        diceRoll();
 //Food for thought: What happens if we try to divide by zero? What should happen?
     }
 
