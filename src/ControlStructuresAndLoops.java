@@ -3,8 +3,10 @@ import java.util.Scanner;
 public class ControlStructuresAndLoops {
     public static void main(String[] args) {
 //        System.out.println(read10Nums());
-        cubedToNumber();
+//        cubedToNumber();
+        oddNumsTo();
     }
+
     /**TODO: Write a program in Java to read 10 numbers from keyboard and find their sum and average
      * */
     public static String read10Nums(){
@@ -37,4 +39,24 @@ public class ControlStructuresAndLoops {
             System.out.println("The number is " + i + " and cube of " + i + " is : " + cubed);
         }
     }
+
+
+    /**TODO: Write a program in Java to display the n terms of odd natural number and their sum. Read the odd number using the Scanner class
+     **/
+    public static void oddNumsTo(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Input number of terms is: ");
+        int n = sc.nextInt();
+        int sum = 0;
+        System.out.print("The odd numbers are: ");
+        for (var i =1; i <= n; i++){
+            {
+                System.out.print(2*i-1 + " ");
+                sum += 2*i-1;
+            }
+        }
+        System.out.println("\nThe Sum of odd Natural Number upto " + n + " terms : " + sum + "\n");
+    }
+
+
 }
