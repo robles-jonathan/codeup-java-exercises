@@ -1,15 +1,20 @@
-public class Penquin {
+package warmups;
+
+public class Penguin {
     private static String name;
     private static int weight;
     private static String species;
     private static char sex;
+    public Penguin() {
+
+    }
 
     public static String getName() {
         return name;
     }
 
     public static void setName(String name) {
-        Penquin.name = name;
+        Penguin.name = name;
     }
 
     public static int getWeight() {
@@ -17,7 +22,7 @@ public class Penquin {
     }
 
     public static void setWeight(int weight) {
-        Penquin.weight = weight;
+        Penguin.weight = weight;
     }
 
     public static String getSpecies() {
@@ -25,7 +30,7 @@ public class Penquin {
     }
 
     public static void setSpecies(String species) {
-        Penquin.species = species;
+        Penguin.species = species;
     }
 
     public static char getSex() {
@@ -33,10 +38,7 @@ public class Penquin {
     }
 
     public static void setSex(char sex) {
-        Penquin.sex = sex;
-    }
-
-    public Penquin() {
+        Penguin.sex = sex;
     }
 
     public static boolean canFly(){
@@ -48,6 +50,13 @@ public class Penquin {
     }
 
     public static void main(String[] args) {
+        Penguin charlie = new Penguin();
+        charlie.name = "Charlie";
+        System.out.println(charlie.getName());
+        Penguin velma = new Penguin();
+        velma.name = "Velma";
+        System.out.println(velma.getName());
+
 
     }
 }

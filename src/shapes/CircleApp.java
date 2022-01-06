@@ -13,5 +13,7 @@ public class CircleApp {
         System.out.println("Area: " + c.getArea());
         System.out.println("Circumference: " + c.getCircumference());
     }
+/**TODO: After a circle is created, use the yesNo method of your Input class and ask the user if they would like to make another. Continue creating circles and displaying information about them until the user says they do not want to continue.
 
+ Before exiting, the program should output the total number of circles created. Use a private static field, along with a public static method to keep track of and display the total number of circles created.*/
 }

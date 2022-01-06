@@ -11,6 +11,10 @@ public class Input {
     public String getString(){
         return sc.nextLine();
     }
+    public String getString(String prompt){
+        System.out.println(prompt);
+        return sc.nextLine();
+    }
 
     public boolean yesNo(){
         String userInput = getString();
@@ -66,4 +70,5 @@ public class Input {
         return userDouble;
     }
 
+    /**TODO: Allow all of your methods for getting input to accept an optional String parameter named prompt. If passed, the method should show the given prompt to the user before parsing the input.**/
 }
