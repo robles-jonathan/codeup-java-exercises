@@ -22,4 +22,8 @@ public class Rectangle {
         return 2 * length + 2 * width;
     }
 
+    public void sayHello(){
+        System.out.println("Hello, World!");
+    }
+
 }

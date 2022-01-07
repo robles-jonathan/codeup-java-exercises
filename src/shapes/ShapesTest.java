@@ -9,5 +9,16 @@ public class ShapesTest {
         Rectangle box2 = new Square(5);
         System.out.println(box2.getPerimeter());
         System.out.println(box2.getArea());
+
+        // Square box2Override = new Square(5);
+        // System.out.println(box2Override.getArea());
+        // System.out.println(box2Override.getPerimeter());
+
+        Rectangle b1 = new Rectangle();
+        b1.sayHello();
+        Rectangle s1 = new Square();
+        s1.sayHello();
+        
+
     }
 }
