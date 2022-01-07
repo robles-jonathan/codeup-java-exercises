@@ -54,17 +54,18 @@ public class ConsoleExercises {
         System.out.println("What is the length, width, and height of your room in feet?");
 
 
-        Scanner scanner = new Scanner(System.in);
-        scanner.useDelimiter("\n");
-        double length = scanner.nextInt();
-        double width = scanner.nextInt();
-        double height = scanner.nextInt();
+        try (Scanner scanner = new Scanner(System.in)) {
+                scanner.useDelimiter("\n");
+                double length = scanner.nextInt();
+                double width = scanner.nextInt();
+                double height = scanner.nextInt();
 
 //        System.out.println("What is the width of your room in feet?");
-        double area = length * width;
-        double perimeter = 2 * length + 2 * width;
-        double volume = length * width * height;
-        System.out.printf("The Area of your room is: %f sqft.\nThe Perimeter of your room is : %f ft.\nThe Volume of your room is: %f ft cubed.", area, perimeter, volume);
+                double area = length * width;
+                double perimeter = 2 * length + 2 * width;
+                double volume = length * width * height;
+                System.out.printf("The Area of your room is: %f sqft.\nThe Perimeter of your room is : %f ft.\nThe Volume of your room is: %f ft cubed.", area, perimeter, volume);
+        }
     }
 }
 
