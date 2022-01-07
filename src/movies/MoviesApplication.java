@@ -5,8 +5,6 @@ import util.Input;
 import java.util.Arrays;
 import java.util.Scanner;
 
-import javax.xml.catalog.Catalog;
-
 public class MoviesApplication {
 
 
@@ -28,11 +26,6 @@ public class MoviesApplication {
     }
 
     public static void main(String[] args) {
-        // Movie[] movies = new Movie[5];
-        // movies = addMovie(movies, new Movie("Khaleesi", "animated"));
-        // for (Movie m : movies) {
-        //     System.out.println("title: " + m.getName() + "category: " + m.getCategory());
-        // }
 
         Scanner sc = new Scanner(System.in);
         int choice;
