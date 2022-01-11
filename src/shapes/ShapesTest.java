@@ -17,5 +17,8 @@ public class ShapesTest {
         Measurable myShape2 = new Rectangle(25, 14);
         System.out.println(myShape2.getArea());
         System.out.println(myShape2.getPerimeter());
+
+//        myShape.getLength();// not included in the Measurable Interface
+
     }
 }

@@ -12,8 +12,8 @@ public class Person{
     }
 
     //prints a message to the console using the person's name
-    public void sayHello(){
-        System.out.printf("Hello %s, nice to meet you.", name);
+    String sayHello(){
+        return String.format("Hello %s, nice to meet you.", name);
     }
 
     //constructor that accepts a string value and sets the person's name to the passed string
