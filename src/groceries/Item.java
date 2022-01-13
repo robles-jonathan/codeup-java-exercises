@@ -3,17 +3,18 @@ package groceries;
 public class Item {
     private String name;
     private int quantity;
+    private float price;
 
-    public Item(String name, int quantity) {
+    // Empty constructor
+    public Item(){}
+
+    public Item(String name, int quantity, float price) {
         this.name = name;
         this.quantity = quantity;
+        this.price = price;
     }
 
-    public Item(String name) {
-        this.name = name;
-    }
-
-    public static String getName(String name) {
+    public String getName(){
         return name;
     }
 
@@ -21,16 +22,19 @@ public class Item {
         this.name = name;
     }
 
-    public int getQuantity() {
+    public int getQuantity(){
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(int quantity){
         this.quantity = quantity;
     }
 
-    @Override
-    public String toString() {
-        return "" + name + ", " + quantity;
+    public float getPrice(){
+        return price;
+    }
+
+    public void setPrice(float price){
+        this.price = price;
     }
 }

@@ -46,7 +46,7 @@ public class GradesApplication {
                 System.out.printf("Sorry, no student found with the GitHub username of \"%s\".\n", input);
             }
             System.out.println("Would you like to see another student?");
-            Input test = new Input(sc);
+            Input test = new Input();
             response = test.yesNo();
         }while(response);
         System.out.println("Have a nice day!");

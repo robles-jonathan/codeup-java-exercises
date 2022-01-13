@@ -3,11 +3,8 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private Scanner sc; // scanner variable
+    private Scanner sc = new Scanner(System.in); ; // scanner variable
 
-    public Input(Scanner sc){
-        this.sc = sc;
-    }
     public String getString(){
         return sc.nextLine();
     }
@@ -42,6 +39,19 @@ public class Input {
         try {
             userInt = Integer.parseInt(getString());
         } catch (NumberFormatException e){
+            e.printStackTrace();
+            System.out.println("ERROR: Must enter a non-decimal number");
+            return getInt();
+        }
+        return userInt;
+    }
+
+    public int getInt(String prompt){
+        System.out.println(prompt);
+        int userInt;
+        try {
+            userInt = Integer.parseInt(getString());
+        } catch (NumberFormatException e){
             System.out.println("ERROR: Must enter a non-decimal number");
             return getInt();
         }
@@ -60,6 +70,19 @@ public class Input {
     }
 
     public double getDouble(){
+        double userDouble;
+        try{
+            userDouble = Double.parseDouble(getString());
+        } catch (NumberFormatException e){
+            e.printStackTrace();
+            System.out.println("ERROR: Must enter a number");
+            return getDouble();
+        }
+        return userDouble;
+    }
+
+    public double getDouble(String prompt){
+        System.out.println(prompt);
         double userDouble;
         try{
             userDouble = Double.parseDouble(getString());

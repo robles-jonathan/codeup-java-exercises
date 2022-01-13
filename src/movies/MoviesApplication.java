@@ -30,7 +30,7 @@ public class MoviesApplication {
         Scanner sc = new Scanner(System.in);
         int choice;
         do {
-            Input userInput = new Input(sc);
+            Input userInput = new Input();
             MoviesArray movie = new MoviesArray();
             Movie[] movies = movie.findAll();
 
