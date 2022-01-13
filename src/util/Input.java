@@ -8,6 +8,7 @@ public class Input {
     public String getString(){
         return sc.nextLine();
     }
+
     public String getString(String prompt){
         System.out.println(prompt);
         return sc.nextLine();
@@ -37,7 +38,7 @@ public class Input {
     public int getInt(){
         int userInt;
         try {
-            userInt = Integer.parseInt(getString());
+            userInt = Integer.valueOf(getString());
         } catch (NumberFormatException e){
             e.printStackTrace();
             System.out.println("ERROR: Must enter a non-decimal number");
@@ -72,7 +73,7 @@ public class Input {
     public double getDouble(){
         double userDouble;
         try{
-            userDouble = Double.parseDouble(getString());
+            userDouble = Double.valueOf(getString());
         } catch (NumberFormatException e){
             e.printStackTrace();
             System.out.println("ERROR: Must enter a number");
@@ -93,5 +94,35 @@ public class Input {
         return userDouble;
     }
 
+    // getBinary
+    public int getBinary() {
+        int output;
+        try {
+            output = Integer.valueOf(getString(), 2);
+        } catch (NumberFormatException e){
+            System.out.println("ERROR: Invalid binary number. Try again.");
+            return getBinary();
+        }
+        return output;
+    }
+
+    // getHex
+    public int getHex(){
+        int output;
+        try {
+            output = Integer.valueOf(getString(), 16);
+        } catch (NumberFormatException e) {
+            System.out.println("ERROR: Invalid hexadecimal. Try again.");
+            return getHex();
+        }
+        return output;
+    }
+
+    public static void main(String[] args) {
+        Input input = new Input(new Scanner(System.in));
+        System.out.println("Enter a number: ");
+        int userInt = input.getHex();
+        System.out.println(userInt);
+    }
     /**TODO: Allow all of your methods for getting input to accept an optional String parameter named prompt. If passed, the method should show the given prompt to the user before parsing the input.**/
 }
