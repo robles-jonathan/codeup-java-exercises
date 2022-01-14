@@ -3,7 +3,7 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private Scanner sc = new Scanner(System.in); ; // scanner variable
+    private Scanner sc = new Scanner(System.in); // scanner variable
 
     public String getString(){
         return sc.nextLine();
@@ -119,7 +119,7 @@ public class Input {
     }
 
     public static void main(String[] args) {
-        Input input = new Input(new Scanner(System.in));
+        Input input = new Input();
         System.out.println("Enter a number: ");
         int userInt = input.getHex();
         System.out.println(userInt);
