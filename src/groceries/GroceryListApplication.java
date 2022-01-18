@@ -46,7 +46,7 @@ public class GroceryListApplication {
         String itemName = in.getString("Please enter the name of the item: ");
         int itemQuantity = in.getInt("Please enter item quantity: ");
         float itemPrice = (float) in.getDouble("Please enter item price: ");
-        in.getString();
+//        in.getString();
         System.out.printf("Please review the following item:%nItem Name: %s%nItem Category: %s%nItem Quantity: %s%nItem Price: $%.2f%nWould you like to add this item to your grocery list?%n", itemName, selectedCategory, itemQuantity, itemPrice);
         if (in.yesNo()) {
             System.out.println("Item has been saved to list.");
