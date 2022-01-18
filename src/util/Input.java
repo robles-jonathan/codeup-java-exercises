@@ -59,6 +59,22 @@ public class Input {
         return userInt;
     }
 
+    public int getInt(String prompt, int min, int max){
+        System.out.println(prompt);
+        int userInput = sc.nextInt();
+
+        try{
+            if(userInput < min && userInput > max) {
+                return Integer.parseInt(this.getString());
+            }
+        } catch(NumberFormatException nfe){
+            //nfe.printStackTrace();
+            System.out.printf("Number is not between %d and %d. Please enter a correct number! %n", min, max);
+            return getInt(prompt, min, max);
+        }
+        return userInput;
+    }
+
     public double getDouble(double min, double max){
         System.out.printf("Enter a number between %s-%s\n", min, max);
         double userDouble = getDouble();
